@@ -318,9 +318,6 @@ def show_build_info():
     info('strip symbols:    %s' % (not conf[CONF_NO_STRIP]))
     info('clean on exit:    %s' % (not conf[CONF_KEEP]))
     info('------------------------------------------')
-    info('press any key to continue ')
-    info('------------------------------------------')
-    dummy = raw_input()
 
 def prepare_builddir(builddir):
     must_mkdir(builddir)
