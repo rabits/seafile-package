@@ -203,6 +203,7 @@ class Seahub(Project):
         Project.__init__(self)
         # nothing to do for seahub
         self.build_commands = [
+            './i18n.sh compile-all'
         ]
 
     def build(self):
@@ -261,7 +262,7 @@ def validate_args(usage, options):
     def check_project_version(version):
         '''A valid version must be like 1.2.2, 1.3'''
         if not re.match('^[0-9]+(\.([0-9])+)+$', version):
-            error('%s is not a valid version' % version)
+            print '%s is not a valid version' % version
 
     version = get_option(CONF_VERSION)
 

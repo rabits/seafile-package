@@ -9,6 +9,7 @@ echo "Get thirdpart libs..."
 
 mkdir thirdpart
 export PYTHONPATH=$(pwd)/thirdpart
+export PATH=$PATH:$(pwd)/thirdpart
 easy_install --optimize 1 --always-unzip -d $PYTHONPATH \
     Django==1.5.1 \
     Djblets==0.6.14 \
@@ -30,6 +31,6 @@ sudo make install
 cd -
 
 echo "  Building other modules & package..."
-./build-server.py --version=4.0.1 --builddir=$(pwd) --srcdir=$(pwd)/src --thirdpartdir=$(pwd)/thirdpart --keep
+./build-server.py "--version=4.0.1-rabits" --builddir=$(pwd) --srcdir=$(pwd)/src --thirdpartdir=$(pwd)/thirdpart --keep
 
 echo "DONE"
