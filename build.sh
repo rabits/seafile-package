@@ -23,11 +23,11 @@ easy_install --optimize 1 --always-unzip -d $PYTHONPATH \
 echo "Start build process..."
 
 echo "  Building static libevhtp & install to /usr/local"
-cd libevhtp
+cd src/libevhtp
 cmake .
 make -j4
 sudo make install
-cd ..
+cd -
 
 echo "  Building other modules & package..."
 ./build-server.py --version=4.0.1 --builddir=$(pwd) --srcdir=$(pwd)/src --thirdpartdir=$(pwd)/thirdpart --keep
