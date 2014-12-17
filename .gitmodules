@@ -1,0 +1,28 @@
+[submodule "src/seafile"]
+	path = src/seafile
+	url = https://github.com/rabits/seafile.git
+	branch = master
+[submodule "src/libevhtp"]
+	path = src/libevhtp
+	url = https://github.com/haiwen/libevhtp.git
+	branch = master
+[submodule "src/libsearpc"]
+	path = src/libsearpc
+	url = https://github.com/haiwen/libsearpc.git
+	branch = master
+[submodule "src/ccnet"]
+	path = src/ccnet
+	url = https://github.com/haiwen/ccnet.git
+	branch = master
+[submodule "src/seafdav"]
+	path = src/seafdav
+	url = https://github.com/haiwen/seafdav.git
+	branch = master
+[submodule "src/seafobj"]
+	path = src/seafobj
+	url = https://github.com/haiwen/seafobj.git
+	branch = master
+[submodule "src/seahub"]
+	path = src/seahub
+	url = https://github.com/haiwen/seahub.git
+	branch = master
