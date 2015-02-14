@@ -23,8 +23,8 @@ export PATH=$PATH:$(pwd)/thirdpart
 #    python_daemon==1.5.5 \
 #    python_dateutil==1.5 \
 #    six==1.4.1
-curl -LO https://bitbucket.org/haiwen/seafile/downloads/seafile-server_4.0.1_x86-64.tar.gz
-tar xf seafile-server_4.0.1_x86-64.tar.gz --strip-components 2 seafile-server-4.0.1/seahub/thirdpart
+curl -LO https://bitbucket.org/haiwen/seafile/downloads/seafile-server_4.0.6_x86-64.tar.gz
+tar xf seafile-server_4.0.6_x86-64.tar.gz --strip-components 2 seafile-server-4.0.6/seahub/thirdpart
 rm -rf thirdpart/captcha thirdpart/registration thirdpart/rest_framework thirdpart/seafdav thirdpart/seafobj
 sed -i 's/python2.6/python2/' thirdpart/django-admin.py
 
@@ -38,6 +38,6 @@ sudo make install
 cd -
 
 echo "  Building other modules & package..."
-./build-server.py "--version=4.0.1-rabits" --builddir=$(pwd) --srcdir=$(pwd)/src --thirdpartdir=$(pwd)/thirdpart --keep
+./build-server.py "--version=4.0.6-rabits" --builddir=$(pwd) --srcdir=$(pwd)/src --thirdpartdir=$(pwd)/thirdpart --keep
 
 echo "DONE"
